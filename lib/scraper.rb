@@ -23,7 +23,7 @@ class Scraper
     links = profile_page.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value } #map will return the array with the methods on it
     #attribute accesses properties
     #value calss the return
-    links.each. do |link|
+    links.each do |link|
       if link.include?("linkedin")
         student[:linkedin] = link
       elsif link.include?("github")
